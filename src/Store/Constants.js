@@ -1,0 +1,12 @@
+export const SET_USERNAME_INPUT = 'set_username_input';
+export const SET_PASSWORD_INPUT = 'set_password_input';
+export const SET_REPASSWORD_INPUT = 'set_repassword_input';
+export const SET_CHECK_USER_VALID = 'set_check_user_valid';
+export const SET_CHECK_PASS_VALID = 'set_check_pass_valid';
+export const SET_CHECK_REPASS_VALID = 'set_check_repass_valid';
+export const USER_LOGIN = 'user_login';
+export const WARNING_LOGIN = 'warning_login';
+export const CHANGE_WIDTH = 'change_width';
+export const SET_CHOOSE_MOVIE_ID = 'set_choose_movie_id';
+export const SET_MOVIE_DETAIL = 'set_movie_detail';
+export const SET_MENU = 'set_menu';

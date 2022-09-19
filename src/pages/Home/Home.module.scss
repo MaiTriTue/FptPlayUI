@@ -1,0 +1,19 @@
+@use '../../components/GlobalStyles/GlobalStyles.scss' as s;
+
+.wrapper {
+    padding-top: 36px;
+    width: 100vw;
+
+    @include s.laptop {
+    }
+
+    @include s.tablet {
+    }
+
+    @include s.mobile {
+    }
+}
+
+.home-categorys {
+    margin: 10px 0 10px 0;
+}

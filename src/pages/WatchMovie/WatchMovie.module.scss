@@ -1,0 +1,597 @@
+@use '../../components/GlobalStyles/GlobalStyles.scss' as s;
+
+.wrapper {
+    width: var(--default-layout-width);
+    padding: 0 15px;
+    margin-top: calc(var(--default-layout-header-height) + var(--default-layout-navbar-height) + 15px);
+
+    @include s.laptop {
+        width: var(--default-layout-width-laptop);
+    }
+    @include s.tablet {
+        width: 100vw;
+        margin-top: calc(var(--default-layout-header-height-tablet) + 15px);
+    }
+    @include s.mobile {
+        width: 100vw;
+        margin-top: calc(var(--default-layout-header-height-mobile) + 15px);
+    }
+}
+
+.gallery-display-area {
+    width: 100%;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+    }
+}
+
+// boc
+.gallery-wrap {
+}
+
+// video
+.gallery_wrap-video {
+    padding-bottom: 40px;
+
+    @include s.mobile {
+        padding-bottom: 20px;
+    }
+}
+// .video {
+//     width: 100%;
+//     height: calc(((var(--default-layout-width) - 30px) * 56.2) / 100);
+
+//     @include s.laptop {
+//     }
+//     @include s.tablet {
+//     }
+//     @include s.mobile {
+//     }
+// }
+
+// tap phim
+.gallery_wrap-episode {
+    padding-bottom: 40px;
+    color: var(--white);
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        padding-bottom: 20px;
+    }
+}
+
+.gallery_wrap-episode-title {
+    font-size: 2.5rem;
+
+    padding-bottom: 8px;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+        font-size: 2rem;
+    }
+    @include s.mobile {
+        font-size: 1.5rem;
+    }
+}
+
+.gallery_wrap-episode-detail {
+    width: 100%;
+    font-size: 1.4rem;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        font-size: 1rem;
+    }
+}
+
+.episodes-wrap01 {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.episodesWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    list-style: none;
+}
+
+.sumEpisode {
+    width: 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 0;
+    margin-right: 10px;
+    border: 1px solid #4a4a4a;
+    border-radius: 5px;
+    cursor: pointer;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        padding: 7px 0;
+    }
+}
+.active {
+    color: #ff6500;
+    border-color: #ff6500;
+}
+
+.episodes-wrap02 {
+    width: 100%;
+    margin: 0 -15px;
+}
+
+.episode {
+    width: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 15px 15px 15px;
+    border: 1px solid #4a4a4a;
+    border-radius: 5px;
+    line-height: 50px;
+    background: #2d2d2d;
+    cursor: pointer;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        line-height: 30px;
+        padding: 0 10px;
+    }
+}
+
+// thong tin phim
+.gallery_wrap-movie-info {
+    width: 100%;
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 48px;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        flex-direction: column;
+        padding-bottom: 24px;
+    }
+}
+
+.movie_info-thumb {
+    width: 16%;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        opacity: 0.9;
+    }
+    img:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        display: none;
+    }
+}
+
+.movie_info-content {
+    width: 50%;
+    padding: 0 15px;
+
+    .info-name {
+        padding-bottom: 5px;
+    }
+
+    .info-name-vietnames {
+        color: var(--white);
+        font-size: 2.5rem;
+        line-height: 3rem;
+        padding-bottom: 15px;
+    }
+
+    .info-name-english {
+        color: var(--text-color2);
+        font-size: 1.6rem;
+        line-height: 2rem;
+        padding-bottom: 5px;
+    }
+
+    .info-btn-contact {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    .infoBtnFollow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+        cursor: pointer;
+        padding: 8px 20px;
+        margin-right: 5px;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(90deg, #252728 0, #3f4143);
+    }
+
+    .infoBtnFollow:focus {
+        background-color: #0980e1;
+        border-color: #0879d5;
+        box-shadow: 0 0 0 0.2rem rgb(60 163 247 / 50%);
+    }
+
+    .btnFollowActive {
+        background: linear-gradient(90deg, #ff3055 0, #fb685f);
+    }
+
+    .infoBtnShare {
+        color: var(--white);
+        padding: 8px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--button-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon-follow {
+        font-size: 2rem;
+        padding-right: 15px;
+    }
+
+    .infoBtnShare:hover {
+        background-color: var(--button-color-hover);
+    }
+
+    .info-title {
+        font-size: 1.4rem;
+        color: var(--white);
+        padding-bottom: 8px;
+    }
+
+    .info-content {
+        font-size: 1.4rem;
+        .content-detail {
+            height: 14px * 1.3 * 3;
+            line-height: 1.3;
+            -webkit-line-clamp: 3; /* số dòng hiển thị */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 15px;
+        }
+        .infoShowContent {
+            cursor: pointer;
+            color: var(--white);
+            display: inline-block;
+        }
+
+        .infoShowContent:hover {
+            color: var(--button-color-hover);
+        }
+    }
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        width: 100%;
+        padding: 0 15px;
+        margin-bottom: 20px;
+
+        .info-name {
+            padding-bottom: 5px;
+        }
+
+        .info-name-vietnames {
+            font-size: 2rem;
+            line-height: 2.5rem;
+            padding-bottom: 3px;
+        }
+
+        .info-name-english {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            padding-bottom: 5px;
+        }
+
+        .info-btn-contact {
+            padding-bottom: 10px;
+        }
+
+        .infoBtnFollow {
+            padding: 5px 10px;
+            margin-right: 5px;
+            font-size: 1.5rem;
+        }
+
+        .infoBtnShare {
+            padding: 5px 10px;
+            font-size: 1.5rem;
+        }
+
+        .icon-follow {
+            font-size: 1.5rem;
+            padding-right: 10px;
+        }
+
+        .info-title {
+            font-size: 1.4rem;
+            color: var(--white);
+            padding-bottom: 8px;
+        }
+
+        .info-content {
+            font-size: 1.4rem;
+            .content-detail {
+                height: 14px * 1.3 * 3;
+                line-height: 1.3;
+                -webkit-line-clamp: 3; /* số dòng hiển thị */
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-bottom: 15px;
+            }
+            .infoShowContent {
+                cursor: pointer;
+                color: var(--white);
+                display: inline-block;
+            }
+
+            .infoShowContent:hover {
+                color: var(--button-color-hover);
+            }
+        }
+    }
+}
+
+.movie_info-cast {
+    width: 34%;
+    padding: 0 15px;
+    line-height: 1.2;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        width: 100%;
+    }
+}
+
+.info_cast {
+    width: 100%;
+    padding: 3px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--white);
+    font-size: 1.35rem;
+}
+
+.info_cast-key {
+    width: 30%;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+    }
+}
+
+.info_cast-value {
+    width: 70%;
+    color: #828282;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+    }
+}
+
+// binh luan
+.gallery_wrap-comments {
+    width: 73%;
+    padding-bottom: 50px;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        width: 100%;
+    }
+}
+
+.container_title {
+    font-size: 1.4rem;
+    color: var(--white);
+    padding-bottom: 16px;
+}
+
+.container_comment {
+    padding: 24px;
+    color: #9b9b9b;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.container_comment-option {
+    font-size: 1.4rem;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container_comment-amount {
+    padding: 10px 0;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        padding: 10px 0;
+        font-size: 1.2rem;
+    }
+}
+
+.container_comment-Sort {
+    span {
+        padding-right: 16px;
+    }
+    select {
+        padding-left: 12px;
+        padding-top: 10px;
+        padding-right: 28px;
+        padding-bottom: 10px;
+        color: var(--white);
+        border-radius: 16px;
+        background-color: #1f1f1f;
+        border: none;
+        outline: none;
+    }
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        span {
+            padding-right: 10px;
+        }
+        select {
+            padding-left: 6px;
+            padding-top: 5px;
+            padding-right: 14px;
+            padding-bottom: 5px;
+            color: var(--white);
+            border-radius: 16px;
+            background-color: #1f1f1f;
+            border: none;
+            outline: none;
+        }
+    }
+}
+
+.container_comment-inputs {
+    width: 100%;
+    height: 14px * 1.3 * 3;
+    line-height: 1.3;
+    -webkit-line-clamp: 2; /* số dòng hiển thị */
+    -webkit-box-orient: vertical;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container_comment-useImg {
+    width: 8.8%;
+    // margin-right: 15px;
+    img {
+        width: 62.5%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .comment-useImg-2 {
+        width: 45% !important;
+        margin: 0 10px;
+    }
+}
+
+.container_comment-input {
+    width: 100%;
+    position: relative;
+}
+
+.comment-input {
+    width: 100%;
+    line-height: 3rem;
+    padding-left: 16px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 20px;
+    background-color: #1f1f1f;
+    color: #9b9b9b;
+}
+
+.comment-input-icon {
+    cursor: pointer;
+    padding: 8px;
+    font-size: 2.5rem;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.comment-input-icon:hover {
+    color: var(--button-color-hover);
+    transition: 400ms;
+}
+
+.comment-input-icon:active {
+    color: #007aff;
+    transition: 400ms;
+}
+
+.container_comments-detail {
+    width: 100%;
+    padding-top: 20px;
+    font-size: 1.2rem;
+}
+
+// trailer
+.gallery_wrap-traile {
+    padding-bottom: 20px;
+}
+
+// phim lieen quan
+.gallery_wrap-relater-movies {
+    padding-bottom: 20px;
+}
+
+// dan dien vien
+.gallery_wrap-cast {
+    padding-bottom: 20px;
+}
+
+// 1
+
+//

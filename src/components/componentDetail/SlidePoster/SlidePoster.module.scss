@@ -1,0 +1,151 @@
+@use '../../GlobalStyles/GlobalStyles.scss' as s;
+.wrapper {
+    width: calc(var(--default-layout-width) - 30px);
+
+    @include s.laptop {
+        width: calc(var(--default-layout-width-laptop) - 30px);
+    }
+
+    @include s.tablet {
+        width: 100vw;
+        padding: 0 15px;
+    }
+
+    @include s.mobile {
+        width: 100vw;
+        padding: 0 10px;
+    }
+}
+
+.gallery-display-area {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    @include s.laptop {
+    }
+
+    @include s.tablet {
+    }
+
+    @include s.mobile {
+    }
+}
+
+.gallery-name {
+    padding: 10px 0;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.gallery-wrap {
+    width: 1000%;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+
+    transition: all 1s;
+}
+
+.moveImg {
+    position: absolute;
+    top: 50%;
+    // transform: translateY(-50%);
+    background: #232323;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 50%);
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    @include s.laptop {
+    }
+
+    @include s.tablet {
+    }
+
+    @include s.mobile {
+        width: 30px;
+        height: 30px;
+        font-size: 1.5rem;
+    }
+}
+
+.prev {
+    display: none;
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.card_item {
+    width: calc(((var(--default-layout-width) - 30px) * 23) / 100);
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+
+    @include s.laptop {
+        width: calc(((var(--default-layout-width-laptop) - 30px) * 23) / 100);
+    }
+
+    @include s.tablet {
+        width: calc((100vw * 37) / 100);
+    }
+
+    @include s.mobile {
+        width: calc((100vw * 37) / 100);
+    }
+}
+
+.card_item-image {
+    width: 100%;
+    height: calc(((((var(--default-layout-width) - 30px) * 23) / 100) * 56) / 100);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 30px rgb(47, 45, 45);
+
+    @include s.laptop {
+        height: calc(((((var(--default-layout-width-laptop) - 30px) * 23) / 100) * 56) / 100);
+    }
+
+    @include s.tablet {
+    }
+
+    @include s.mobile {
+        height: calc((100vw * 20) / 100);
+    }
+}
+
+.card_item-name {
+    padding: 15px 0 5px 0;
+    font-size: 1.9rem;
+    color: var(--white);
+    display: inline;
+
+    h5 {
+        display: inline;
+    }
+
+    h5:hover {
+        cursor: pointer;
+        color: var(--button-color);
+    }
+
+    @include s.laptop {
+    }
+
+    @include s.tablet {
+    }
+
+    @include s.mobile {
+        padding: 10px 0 5px 0;
+        font-size: 1.2rem;
+    }
+}

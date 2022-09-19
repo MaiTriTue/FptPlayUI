@@ -1,0 +1,256 @@
+@use '../../GlobalStyles/GlobalStyles.scss' as s;
+
+.wrapper {
+    width: calc(var(--default-layout-width) - 30px);
+
+    @include s.laptop {
+        width: calc(var(--default-layout-width-laptop) - 30px);
+    }
+    @include s.tablet {
+        width: 100%;
+        padding: 0 10px;
+    }
+    @include s.mobile {
+        width: 100%;
+    }
+}
+
+.gallery-display-area {
+    width: 100%;
+    margin: 0 auto;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+    }
+}
+
+.gallery-wrap {
+    width: 100%;
+    transition: all 1s;
+}
+
+.gallery-name {
+    padding: 20px 0;
+    font-size: 2rem;
+    color: var(--white);
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+        padding: 15px 0;
+        font-size: 1.5rem;
+    }
+    @include s.mobile {
+        padding: 10px 0;
+        font-size: 1.2rem;
+    }
+}
+
+.group {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+    }
+}
+
+.group {
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        @include s.laptop {
+        }
+        @include s.tablet {
+        }
+        @include s.mobile {
+        }
+    }
+}
+
+.poster-image {
+    background: url('https://fptplay.vn/images/player/poster-default.jpg') center center;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    // opacity: 0.7;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    // height: 90%;
+    width: 100%;
+    transition: all 0.3s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    cursor: pointer;
+
+    .poster-image-icon:hover {
+        opacity: 0.7;
+    }
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+    }
+}
+
+.poster-image-content {
+    position: absolute;
+    top: 15%;
+    text-align: center;
+    font-size: 2.5rem;
+    opacity: 1;
+    z-index: 1;
+
+    p {
+        font-weight: 300;
+    }
+
+    h3 {
+        display: inline-block;
+        color: var(--button-color);
+    }
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+        font-size: 2rem;
+    }
+    @include s.mobile {
+        font-size: 1.2rem;
+        top: 10%;
+    }
+}
+
+.model-check-login_img {
+    width: 96%;
+    height: 94%;
+    opacity: 0.7;
+    border-radius: 10px;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+    }
+}
+
+.model-check-login {
+    position: absolute;
+    width: 70%;
+    border-radius: 0 0 10px 10px;
+    top: 60%;
+    transform: translateY(-50%);
+    background-color: #1d1f24;
+    font-size: 1.5rem;
+    color: var(--white);
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+        font-size: 1.5rem;
+    }
+    @include s.mobile {
+        font-size: 1rem;
+    }
+}
+
+.login_body-btns,
+.login_body-content,
+.model-check-login_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.model-check-login_header {
+    padding: 8px 0;
+    background-color: #323335;
+    font-size: 2.2rem;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+        font-size: 1.5rem;
+    }
+    @include s.mobile {
+        font-size: 1rem;
+    }
+}
+
+.model-check-login_body {
+    padding: 25px 10px;
+
+    .login_body-content {
+        padding-bottom: 16px;
+    }
+
+    .login_body-btns {
+    }
+
+    .btn-login,
+    .btn-register {
+        margin: 0 10px;
+        padding: 10px 0;
+        width: 20%;
+        border-radius: 5px;
+        font-weight: 700;
+        color: var(--white);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn-register {
+        background-color: #9b9b9b;
+        &:hover {
+            background: #323335;
+        }
+    }
+
+    .btn-login {
+        background-color: var(--button-color);
+    }
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+        padding: 25px 10px;
+        font-size: 1.5rem;
+    }
+    @include s.mobile {
+        padding: 15px 10px;
+        font-size: 1rem;
+
+        .btn-login,
+        .btn-register {
+            margin: 0 5px;
+            padding: 5px 5px;
+            width: 30%;
+            border-radius: 5px;
+            font-weight: 500;
+            color: var(--white);
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+    }
+}

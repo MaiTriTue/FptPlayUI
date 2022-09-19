@@ -1,0 +1,231 @@
+@use '../../components/GlobalStyles/GlobalStyles.scss' as s;
+
+.wrapper {
+    width: 100%;
+    margin-top: 115px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        margin-top: var(--default-layout-header-height-mobile);
+    }
+}
+
+.wrapper-warning {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+    display: none;
+}
+
+.gallery-display-area {
+    width: calc((var(--default-layout-width) * 33.9 / 100));
+    padding: 48px 24px;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+    }
+}
+
+.gallery-wrap-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    h2 {
+        color: var(--white);
+        font-size: 2.5rem;
+        font-weight: 500;
+
+        padding-bottom: 16px;
+    }
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+    }
+}
+
+.gallery-wrap {
+    padding: 48px;
+
+    background-color: #1f1f1f;
+    border-radius: 5px;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+    }
+}
+
+.gallery-wrap-input {
+    width: 100%;
+    padding-bottom: 16px;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+    }
+}
+
+.gallery-wrap-facebook {
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.wrap-input {
+    width: 100%;
+    position: relative;
+
+    input {
+        cursor: pointer;
+        width: 100%;
+        padding: 8px 12px;
+        display: block;
+        line-height: 1.5;
+
+        border: 1px solid transparent !important;
+        color: var(--white);
+
+        font-size: 1.6rem;
+        font-weight: 500;
+        border-radius: 3px;
+        background-clip: padding-box;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+        @include s.laptop {
+        }
+        @include s.tablet {
+        }
+        @include s.mobile {
+        }
+    }
+
+    .submit {
+        background-color: var(--button-color);
+        border-color: var(--button-color);
+    }
+    .login-facebook {
+        background-color: #4267b2;
+        border-color: #4267b2;
+    }
+    .login-google {
+        background-color: #dd4b39;
+        border-color: #dd4b39;
+    }
+
+    .submit:focus {
+        border-color: var(--button-color-hover);
+        background-color: var(--button-color-hover);
+        box-shadow: 0 0 0 0.3rem rgb(255 101 0 / 25%);
+    }
+
+    .submit:hover {
+        border-color: var(--button-color-hover);
+        background-color: var(--button-color-hover);
+    }
+
+    .login-facebook:focus {
+        border-color: #2d477a;
+        background-color: #2d477a;
+        box-shadow: 0 0 0 0.3rem rgb(255 101 0 / 25%);
+    }
+
+    .login-facebook:hover {
+        border-color: #2d477a;
+        background-color: #2d477a;
+    }
+
+    .login-google:focus {
+        border-color: #ac2d1e;
+        background-color: #ac2d1e;
+        box-shadow: 0 0 0 0.3rem rgb(255 101 0 / 25%);
+    }
+    .login-google:hover {
+        border-color: #ac2d1e;
+        background-color: #ac2d1e;
+    }
+}
+
+.forgot-password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 300;
+
+    .quest {
+        margin-right: 5px;
+        color: #828282;
+    }
+
+    a {
+        cursor: pointer;
+        font-size: 1.4rem;
+        font-weight: 300;
+    }
+
+    a:hover {
+        color: var(--button-color-hover);
+    }
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+    }
+}
+
+.wrap-or {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 24px 0;
+    font-weight: 300;
+    .cross {
+        width: 100%;
+        text-align: center;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        line-height: 0.1rem;
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    span {
+        padding: 0 10px;
+        background-color: #1f1f1f;
+        color: #828282;
+        position: absolute;
+
+        font-size: 1.4rem;
+    }
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+    }
+}

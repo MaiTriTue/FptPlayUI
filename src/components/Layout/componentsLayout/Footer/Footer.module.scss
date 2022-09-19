@@ -1,0 +1,233 @@
+@use '../../../GlobalStyles/GlobalStyles.scss' as s;
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 15px;
+    color: #9b9b9b;
+    line-height: 1.625;
+    background-color: var(--black);
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+    }
+}
+
+.gallery-display-area {
+    width: var(--default-layout-width);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        flex-direction: column;
+    }
+}
+
+.footer_logo {
+    width: 17.1%;
+    padding: 0 15px;
+
+    min-height: 100px;
+
+    img {
+        margin-bottom: 10px;
+    }
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .footer_logo-img:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+}
+
+.footer_contacts {
+    width: 65.8%;
+    padding: 0 15px;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        width: 100%;
+    }
+}
+
+.category-link {
+    border-bottom: 1px solid var(--text-color);
+    line-height: 2;
+    margin-bottom: 16px;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        font-size: 1.5rem;
+
+        a:hover {
+            color: var(--button-color-hover);
+        }
+    }
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        position: relative;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            font-size: 1.2rem;
+            margin-bottom: 4rem;
+
+            li:not(:last-child) {
+                margin-right: 10px;
+                line-height: 1.5;
+                font-weight: 300;
+                display: inline;
+            }
+
+            li:last-child {
+                position: absolute;
+                bottom: 0;
+                right: 50%;
+                transform: translateX(50%);
+                display: block;
+            }
+
+            a:hover {
+                color: var(--button-color-hover);
+            }
+        }
+    }
+}
+
+.about-infomation {
+    span {
+        font-size: 1.35rem;
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        flex-direction: column;
+    }
+}
+
+.footer_about {
+}
+.btnIcon {
+    font-size: 2.5rem;
+    margin-left: 10px;
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        flex-direction: column;
+    }
+}
+
+// footer - about
+
+.footer_about {
+    width: 17.1%;
+    padding: 0 15px;
+    color: var(--white);
+
+    font-size: 1.6rem;
+
+    span {
+        margin-left: 10px;
+    }
+
+    @include s.laptop {
+    }
+    @include s.tablet {
+    }
+    @include s.mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        .btnMessage {
+            padding: 5px 16px;
+            display: inline-block;
+            border-radius: 20px;
+            border: 1px solid var(--button-color);
+            background-color: var(--button-color);
+            margin: 6px 0;
+
+            a,
+            .iconMessage,
+            span {
+                color: var(--white);
+            }
+        }
+        .btnPhone {
+            padding: 6px 16px;
+            display: inline-block;
+            border-radius: 20px;
+            border: 1px solid var(--button-color);
+            background-color: var(--button-color);
+        }
+    }
+}
+
+.btnFacebook {
+    font-size: 3rem;
+
+    .btnFacebook-icon:hover {
+        color: var(--button-color);
+        cursor: pointer;
+    }
+}
+.btnMessage {
+    padding: 5px 16px;
+    display: inline-block;
+    border-radius: 20px;
+    border: 1px solid var(--button-color);
+    background-color: var(--button-color);
+    margin: 6px 0;
+
+    a,
+    .iconMessage,
+    span {
+        color: var(--white);
+    }
+}
+.btnPhone {
+    padding: 6px 16px;
+    display: inline-block;
+    border-radius: 20px;
+    border: 1px solid var(--button-color);
+    background-color: var(--button-color);
+}

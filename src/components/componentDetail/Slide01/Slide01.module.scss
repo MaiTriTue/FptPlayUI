@@ -1,0 +1,223 @@
+@use '../../../components/GlobalStyles/GlobalStyles.scss' as s;
+
+.wrapper {
+    width: calc(var(--default-layout-width) - 30px);
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: calc(var(--default-layout-header-height) + var(--default-layout-navbar-height));
+
+    @include s.laptop {
+        width: calc(var(--default-layout-width-laptop) - 30px);
+    }
+
+    @include s.tablet {
+        width: 100vw;
+        margin-top: var(--default-layout-header-height-mobile);
+        padding: 0 15px;
+    }
+
+    @include s.mobile {
+        width: 100vw;
+        padding: 0 10px;
+        margin-top: var(--default-layout-header-height-mobile);
+    }
+}
+
+.gallery-display-area {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 5px;
+
+    @include s.laptop {
+    }
+
+    @include s.tablet {
+    }
+
+    @include s.mobile {
+    }
+}
+
+.moveImg {
+    position: absolute;
+    width: 40px;
+    height: 70px;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    color: var(--white);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+
+    @include s.mobile {
+        width: 30px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.gallery-wrap {
+    width: 1000%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+.image {
+    position: relative;
+    width: 100%;
+
+    img {
+        cursor: pointer;
+        width: 100%;
+        height: calc(((var(--default-layout-width) - 30px) * 56) / 100);
+        object-fit: cover;
+        border-radius: 5px;
+
+        @include s.laptop {
+            height: calc(((var(--default-layout-width-laptop) - 30px) * 56) / 100);
+        }
+
+        @include s.tablet {
+            width: 100%;
+            height: 55vw;
+        }
+
+        @include s.mobile {
+            width: 100%;
+            height: 55vw;
+        }
+    }
+}
+
+.chieurap-quality-lang {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+
+.labelInfo {
+    padding: 5px 20px;
+    border-radius: 20px;
+    background: linear-gradient(var(--button-color), var(--border-color));
+    box-shadow: 1px 3px 10px var(--black);
+}
+
+.chieuRap {
+    margin-right: 10px;
+}
+
+.quality-lang {
+}
+
+.name-episode {
+    width: 100%;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    padding: 60px 30px 20px 30px;
+    color: var(--white);
+    background: linear-gradient(transparent, Black);
+
+    h3 {
+        font-size: 2.5rem;
+        font-weight: 700;
+
+        margin-bottom: 8px;
+    }
+    h5 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: #9b9b9b;
+        margin-bottom: 8px;
+    }
+    .btnMovieView {
+        position: absolute;
+        padding: 8px 16px;
+        bottom: 30px;
+        right: 30px;
+        border-radius: 20px;
+        color: var(--white);
+    }
+}
+
+.icon-right {
+    margin-left: 5px;
+}
+
+@include s.laptop {
+}
+
+@include s.tablet {
+}
+
+@include s.mobile {
+    .chieurap-quality-lang {
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        font-size: 1rem;
+    }
+
+    .labelInfo {
+        padding: 3px 10px;
+    }
+
+    .chieuRap {
+        margin-right: 5px;
+    }
+
+    .quality-lang {
+    }
+
+    .name-episode {
+        padding: 60px 10px 20px 10px;
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+
+            margin-bottom: 5px;
+        }
+        h5 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #9b9b9b;
+            margin-bottom: 8px;
+        }
+        .btnMovieView {
+            font-size: 1.2rem;
+            padding: 8px 16px;
+            bottom: 30px;
+            right: 0;
+        }
+    }
+
+    .icon-right {
+        margin-left: 5px;
+    }
+}

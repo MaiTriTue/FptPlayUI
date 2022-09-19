@@ -1,0 +1,91 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+:root {
+    --primary: #ff6500;
+    --black: #000;
+    --white: #fff;
+    --text-color: #9b9b9b;
+    --text-color2: #828282;
+    --text-color3: #b4b4b4;
+    --button-color: #ff6500;
+    --button-color-hover: #d95600;
+    --border-color: #cc5100;
+
+    //  default layout
+    --default-layout-header-height: 64px;
+    --default-layout-header-height-tablet: 52px;
+    --default-layout-header-height-mobile: 55px;
+    --default-layout-navbar-height: 49px;
+    --default-layout-width: 1180px;
+    --default-layout-width-laptop: 960px;
+    // --default-layout-width-mobile: 1180px;
+    --default-layout-detail-width: 1150px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    color: var(--text-color);
+    background-color: #111;
+}
+
+input,
+button,
+[tabindex] {
+    border: none;
+    outline: none;
+}
+
+a[href] {
+    color: var(--text-color3);
+    text-decoration: none;
+}
+
+.icon-down {
+    margin-left: 5px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--button-color-hover);
+    border-color: var(--border-color);
+}
+
+$res_mobile: 'only screen and (max-width: 779px)';
+$res_tablet: 'only screen and (min-width: 780px) and (max-width: 1023px)';
+$res_laptop: 'only screen and (min-width: 1024px)and (max-width: 1279px)';
+$res_desktop: 'only screen and (min-width: 1280px)';
+
+@mixin mobile() {
+    @media #{$res_mobile} {
+        @content;
+    }
+}
+@mixin tablet() {
+    @media #{$res_tablet} {
+        @content;
+    }
+}
+@mixin laptop() {
+    @media #{$res_laptop} {
+        @content;
+    }
+}
+@mixin desktop() {
+    @media #{$res_desktop} {
+        @content;
+    }
+}
